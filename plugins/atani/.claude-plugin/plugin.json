@@ -5,7 +5,7 @@
   "author": {
     "name": "팀스파르타 제품실 학습관리스쿼드"
   },
-  "repository": "https://github.com/teamsparta/atani-plugins",
+  "repository": "https://github.com/teamspartas/atani-plugins",
   "keywords": ["atani", "nbcamp", "tutor", "curriculum"],
   "hooks": "./hooks.json",
   "mcpServers": "./.mcp.json"

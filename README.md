@@ -11,5 +11,9 @@
 ## 설치 방법
 
 ```bash
-claude plugin add --from github:teamspartas/atani-plugins
+# 1. 마켓플레이스 추가
+claude plugin marketplace add teamspartas/atani-plugins
+
+# 2. 플러그인 설치
+claude plugin install atani
 ```

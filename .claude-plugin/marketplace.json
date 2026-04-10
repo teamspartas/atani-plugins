@@ -1,6 +1,13 @@
 {
   "name": "atani-plugins",
-  "description": "에이타니 Claude Code 플러그인",
+  "owner": {
+    "name": "팀스파르타 제품실 학습관리스쿼드",
+    "email": "dev@teamsparta.co"
+  },
+  "metadata": {
+    "description": "에이타니 Claude Code 플러그인",
+    "pluginRoot": "./plugins"
+  },
   "plugins": [
     {
       "name": "atani",
