@@ -1,0 +1,12 @@
+{
+  "name": "atani",
+  "description": "내일배움캠프 AI 튜터 에이타니 - 커리큘럼/학습자료 참조 및 학습 가이드",
+  "version": "1.0.0",
+  "author": {
+    "name": "팀스파르타 제품실 학습관리스쿼드"
+  },
+  "repository": "https://github.com/teamsparta/atani-plugins",
+  "keywords": ["atani", "nbcamp", "tutor", "curriculum"],
+  "hooks": "./hooks.json",
+  "mcpServers": "./.mcp.json"
+}

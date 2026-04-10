@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "atani": {
+      "type": "http",
+      "url": "https://atani-mcp.vercel.app/mcp"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "atani-plugins",
+  "description": "에이타니 Claude Code 플러그인",
+  "plugins": [
+    {
+      "name": "atani",
+      "source": "./plugins/atani",
+      "description": "내일배움캠프 AI 튜터 에이타니 - 커리큘럼/학습자료 참조 및 이분탐색 튜터링",
+      "keywords": ["atani", "nbcamp", "tutor", "curriculum"],
+      "category": "education"
+    }
+  ]
+}
