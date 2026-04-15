@@ -22,12 +22,13 @@ claude plugin install atani
 
 ### 2. 인증
 
-터미널에서 원하는 프로젝트 폴더로 이동한 뒤 `claude`를 실행합니다.
+터미널을 열고 프로젝트 폴더에서 `claude`를 실행합니다.
 
 처음 사용 시 인증이 필요합니다. `/mcp` 명령어를 입력하세요.
 
 ```
 /mcp
+
 Built-in MCPs (always available)
   ❯ plugin:atani:atani    ← 선택
 ```
