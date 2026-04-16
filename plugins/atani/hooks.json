@@ -2,7 +2,7 @@
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": "mcp__.*__session_init",
+        "matcher": "mcp__atani__.*",
         "hooks": [
           {
             "type": "command",
