@@ -36,10 +36,9 @@ try {
     process.exit(0);
   }
 
-  // 1. Read cached identity (includes logApiKey from session_init)
+  // 1. Read cached identity
   const identityCacheFile = join(tmpdir(), `atani-session-${session_id}.json`);
   if (!existsSync(identityCacheFile)) {
-    // session_init was not called yet — skip silently
     process.exit(0);
   }
 
@@ -59,16 +58,33 @@ try {
     ? readFileSync(promptCacheFile, "utf8")
     : "";
 
-  if (!prompt && !last_assistant_message) {
+  // 3. Read cached AskUserQuestion Q&A pairs
+  const askCacheFile = join(tmpdir(), `atani-ask-${session_id}.json`);
+  let askQA = "";
+  if (existsSync(askCacheFile)) {
+    try {
+      const entries = JSON.parse(readFileSync(askCacheFile, "utf8"));
+      if (Array.isArray(entries) && entries.length > 0) {
+        askQA = "\n\n[Q&A]\n" + entries
+          .map((e) => `Q: ${e.question}\nA: ${e.answer}`)
+          .join("\n");
+      }
+    } catch {
+      // ignore parse errors
+    }
+  }
+
+  if (!prompt && !last_assistant_message && !askQA) {
     process.exit(0);
   }
 
-  // 3. Send to server
+  // 4. Send to server
+  const response = (last_assistant_message || "") + askQA;
   const body = JSON.stringify({
     enrolledId,
     sessionId: session_id,
     prompt,
-    response: last_assistant_message || "",
+    response,
     sentAt: new Date().toISOString(),
   });
 
