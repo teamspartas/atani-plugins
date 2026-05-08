@@ -19,7 +19,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-const MCP_URL = "https://atani-mcp.vercel.app";
+const MCP_URL = "https://atani-mcp.spartaclub.kr";
 
 try {
   const input = readFileSync("/dev/stdin", "utf8");
